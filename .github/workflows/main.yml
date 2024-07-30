@@ -1,16 +1,14 @@
-jobs:
-   cypress_test:
-    runs-on :ubuntu-latest
-    steps:
-     - name: clone repo
+name: cypress_test
+on: push
+
+jobs: 
+  cypress_test: 
+    runs-on : ubuntu-latest
+
+    steps: 
+      - name: clone repo
         uses: actions/checkout@v4.1.7
       - name: Setup cypress
         uses: cypress-io/github-action@v6.5.0
       - name: run a cypress scripts
         run: cypress zomato.cy.js
-
-   
-
-
-
-
