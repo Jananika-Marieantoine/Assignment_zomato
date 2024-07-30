@@ -6,7 +6,7 @@ jobs:
     runs-on : ubuntu-latest
 
     steps: 
-      - name: clone repo
+      - name: clone repository
         uses: actions/checkout@v4.1.7
       - name: Setup cypress
         uses: cypress-io/github-action@v6.5.0
